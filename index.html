@@ -90,6 +90,7 @@
                 <li><a href="#histoire">Histoire</a></li>
                 <li><a href="#menu">La Carte</a></li>
                 <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#ai" data-open-ai>Concierge IA</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a class="nav-whatsapp" href="https://wa.me/33767877538" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                 <li><a href="#reservation" class="nav-cta">Réserver</a></li>
@@ -113,6 +114,7 @@
             <p class="hero-location">18 Grande Rue · Juvisy-sur-Orge</p>
             <div class="hero-ctas">
                 <a href="#reservation" class="btn btn-gold">Réserver une table</a>
+                <a class="btn btn-outline" href="#ai" data-open-ai>Demander à l’IA</a>
                 <a class="btn btn-whatsapp" href="https://wa.me/33767877538" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
         </div>
@@ -497,11 +499,36 @@
     <a class="wa-fab" href="https://wa.me/33767877538" target="_blank" rel="noopener noreferrer" aria-label="Réserver sur WhatsApp">
         <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3zM12.1 21.8h-.1c-1.8 0-3.5-.5-5-1.4L4 21.2l.8-2.9c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-9.2 10zm0-18.2c-4.5 0-8.2 3.7-8.2 8.2 0 1.8.6 3.5 1.6 4.9l.2.3-.5 1.9 1.9-.5.3.2c1.4.9 3 1.3 4.6 1.3h.1c4.5 0 8.2-3.7 8.2-8.2S16.6 3.6 12.1 3.6z"/></svg>
     </a>
+    <button class="ai-fab" id="aiFab" type="button" aria-expanded="false" aria-controls="ai">Concierge IA</button>
+    <aside class="ai-panel" id="ai" aria-label="Concierge IA du Continent 237">
+        <div class="ai-head">
+            <div>
+                <p>Concierge IA</p>
+                <h3>Chez Fefe</h3>
+            </div>
+            <button type="button" id="aiClose" aria-label="Fermer le concierge">×</button>
+        </div>
+        <div class="ai-log" id="aiLog">
+            <div class="ai-msg ai-msg-bot">Je connais la carte du Continent 237. Demandez un plat, un budget, les horaires ou une table — je vous oriente, puis WhatsApp pour confirmer.</div>
+        </div>
+        <div class="ai-chips">
+            <button type="button" data-ai-prompt="Que me conseilles-tu pour une première fois ?">Première visite</button>
+            <button type="button" data-ai-prompt="Un poisson vers 15 euros">Poisson 15 €</button>
+            <button type="button" data-ai-prompt="Horaires et adresse">Horaires</button>
+            <button type="button" data-ai-prompt="Je veux réserver une table">Réserver</button>
+        </div>
+        <form class="ai-form" id="aiForm">
+            <label class="sr-only" for="aiInput">Votre message</label>
+            <input id="aiInput" type="text" autocomplete="off" placeholder="Ex. ndolé, 2 personnes samedi 20h…">
+            <button type="submit">Envoyer</button>
+        </form>
+    </aside>
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo">
         <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fermer">×</button>
         <img id="lightboxImage" alt="">
         <p id="lightboxCaption"></p>
     </div>
     <script src="/app.js"></script>
+    <script src="/ai.js"></script>
 </body>
 </html>
