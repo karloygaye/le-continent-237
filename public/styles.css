@@ -420,64 +420,71 @@ section { padding: 8rem 2rem; }
     font-weight: 300;
 }
 
-.story { background: var(--blanc-casse); position: relative; }
-
-.story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+.story {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: min(92svh, 920px);
+    display: flex;
     align-items: center;
+    color: white;
 }
 
-.story-image { position: relative; aspect-ratio: 3/4; overflow: hidden; }
-
-.story-image img {
-    width: 100%; height: 100%;
+.story-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.8s ease;
+    object-position: center 28%;
+    filter: contrast(1.65) saturate(1.25) brightness(0.55);
+    transform: scale(1.06);
+    z-index: 0;
 }
 
-.story-image:hover img { transform: scale(1.05); }
-
-.story-image::before {
+.story::after {
     content: '';
     position: absolute;
-    top: 20px; left: 20px; right: -20px; bottom: -20px;
-    border: 3px solid var(--jaune-cameroun);
-    z-index: -1;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(6, 4, 2, 0.88) 0%, rgba(6, 4, 2, 0.55) 42%, rgba(6, 4, 2, 0.22) 100%),
+        linear-gradient(180deg, rgba(6, 4, 2, 0.35) 0%, transparent 30%, rgba(6, 4, 2, 0.45) 100%);
 }
 
-.story-image::after {
-    content: '';
-    position: absolute;
-    bottom: -10px; right: -10px;
-    width: 100px; height: 100px;
-    background: var(--rouge-cameroun);
-    z-index: -2;
+.story .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
 }
+
+.story-content { max-width: 36rem; }
+
+.story-content .section-number { color: var(--jaune-cameroun); }
 
 .story-content h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    margin-bottom: 2rem;
-    color: var(--noir);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    margin-bottom: 1.6rem;
+    color: white;
+    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
-.story-content h2 em { font-style: italic; color: var(--vert-cameroun); }
+.story-content h2 em { font-style: italic; color: var(--jaune-cameroun); }
 
 .story-content p {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     line-height: 1.8;
-    color: #444;
-    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.35rem;
     font-weight: 300;
 }
 
 .story-signature {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1.3rem;
-    color: var(--rouge-cameroun);
-    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: var(--jaune-cameroun);
+    margin-top: 1.5rem;
     padding-left: 1rem;
     border-left: 3px solid var(--jaune-cameroun);
 }
@@ -1008,9 +1015,11 @@ footer::before {
     .nav-links.open a { font-size: 1.2rem; }
     .nav-links.open .nav-cta { display: inline-flex; }
 
-    .story-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .story-image::before,
-    .story-image::after { display: none; }
+    .story { min-height: 80svh; }
+    .story::after {
+        background:
+            linear-gradient(180deg, rgba(6, 4, 2, 0.72) 0%, rgba(6, 4, 2, 0.55) 55%, rgba(6, 4, 2, 0.78) 100%);
+    }
 
     .gallery-grid {
         grid-template-columns: repeat(6, 1fr);
