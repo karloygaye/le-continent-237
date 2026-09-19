@@ -161,11 +161,9 @@ h1, h2, h3, h4 {
 
 .hero {
     position: relative;
+    isolation: isolate;
     height: 100svh;
     min-height: 640px;
-    background:
-        linear-gradient(180deg, rgba(10, 10, 10, 0.28) 0%, rgba(10, 10, 10, 0.12) 38%, rgba(10, 10, 10, 0.82) 100%),
-        url('/facade.jpg') center 42%/cover no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -174,7 +172,23 @@ h1, h2, h3, h4 {
     padding-bottom: 5rem;
 }
 
-.hero::before { display: none; }
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('/facade.jpg') center 42%/cover no-repeat;
+    filter: contrast(1.42) saturate(1.18) brightness(0.72);
+    transform: scale(1.05);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(8, 6, 4, 0.22) 0%, rgba(8, 6, 4, 0.12) 38%, rgba(8, 6, 4, 0.78) 100%);
+}
 
 .hero-content {
     position: relative;
@@ -316,6 +330,7 @@ h1, h2, h3, h4 {
     position: absolute;
     bottom: 3rem;
     left: 50%;
+    z-index: 2;
     transform: translateX(-50%);
     color: rgba(255,255,255,0.6);
     font-size: 0.7rem;
