@@ -1050,7 +1050,9 @@ footer::before {
     .gallery-item:nth-child(7) { grid-column: span 3; grid-row: span 1; }
     .gallery-item:nth-child(8) { grid-column: span 6; grid-row: span 1; }
 
+    .featured-showcase { grid-template-columns: 1fr; }
     .featured-grid { grid-template-columns: 1fr 1fr; }
+    .facade-card img { min-height: 380px; }
     .menu-shot { max-width: 280px; margin: 0 auto 2rem; }
     .nav { padding: 0.9rem 1.1rem; }
     .nav.scrolled { padding: 0.8rem 1.1rem; }
@@ -1078,7 +1080,9 @@ footer::before {
     .footer-grid { grid-template-columns: 1fr; }
     .menu-tabs { gap: 0; }
     .menu-tab { padding: 0.6rem 0.8rem; font-size: 0.65rem; }
+    .featured-showcase { grid-template-columns: 1fr; }
     .featured-grid { grid-template-columns: 1fr; }
+    .facade-card img { min-height: 280px; }
 }
 
 .featured {
@@ -1086,10 +1090,83 @@ footer::before {
     padding: 6rem 2rem;
 }
 
+.featured-showcase {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.facade-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 100%;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 22px 50px rgba(10, 10, 10, 0.16);
+}
+
+.facade-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    filter: contrast(1.4) saturate(1.15) brightness(0.88);
+    display: block;
+    min-height: 520px;
+    transition: transform 0.7s ease;
+}
+
+.facade-card:hover img { transform: scale(1.04); }
+
+.facade-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 6, 4, 0.08) 20%, rgba(8, 6, 4, 0.82) 100%);
+}
+
+.facade-card-copy {
+    position: absolute;
+    left: 1.4rem;
+    right: 1.4rem;
+    bottom: 1.4rem;
+    z-index: 1;
+}
+
+.facade-card-copy p {
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--jaune-cameroun);
+    margin-bottom: 0.4rem;
+}
+
+.facade-card-copy h3 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.facade-card-copy span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.82);
+}
+
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
+}
+
+.gallery-item-facade img {
+    filter: contrast(1.38) saturate(1.12) brightness(0.9);
+    object-position: center 38%;
+}
+
+.gallery-item-facade .gallery-caption {
+    font-size: 1.45rem;
 }
 
 .dish-card {
