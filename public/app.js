@@ -16,14 +16,22 @@ navLinks.querySelectorAll('a').forEach((link) => {
 const tabs = document.querySelectorAll('.menu-tab')
 const categories = document.querySelectorAll('.menu-category')
 
+function activateTab(target) {
+  if (!target) return
+  tabs.forEach((t) => t.classList.remove('active'))
+  categories.forEach((c) => c.classList.remove('active'))
+  const tab = document.querySelector(`.menu-tab[data-tab="${target}"]`)
+  const panel = document.getElementById(target)
+  tab?.classList.add('active')
+  panel?.classList.add('active')
+}
+
 tabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.tab
-    tabs.forEach((t) => t.classList.remove('active'))
-    categories.forEach((c) => c.classList.remove('active'))
-    tab.classList.add('active')
-    document.getElementById(target).classList.add('active')
-  })
+  tab.addEventListener('click', () => activateTab(tab.dataset.tab))
+})
+
+document.querySelectorAll('[data-open-tab]').forEach((link) => {
+  link.addEventListener('click', () => activateTab(link.getAttribute('data-open-tab')))
 })
 
 const observer = new IntersectionObserver(
@@ -123,4 +131,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   })
+})
+
+const lightbox = document.getElementById('lightbox')
+const lightboxImage = document.getElementById('lightboxImage')
+const lightboxCaption = document.getElementById('lightboxCaption')
+
+document.querySelectorAll('.gallery-item').forEach((item) => {
+  item.addEventListener('click', () => {
+    lightboxImage.src = item.dataset.full
+    lightboxImage.alt = item.querySelector('img')?.alt || ''
+    lightboxCaption.textContent = item.dataset.caption || ''
+    lightbox.classList.add('open')
+  })
+})
+
+function closeLightbox() {
+  lightbox.classList.remove('open')
+  lightboxImage.src = ''
+}
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox)
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox()
+})
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox()
 })

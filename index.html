@@ -115,6 +115,47 @@
         </div>
     </div>
 
+    <section class="featured" id="plats">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-number">— À la carte</div>
+                <h2 class="section-title">Les plats <em>du feu</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Photos prises au Continent 237 — Chez Fefe</p>
+            </div>
+            <div class="featured-grid">
+                <a class="dish-card reveal" href="#menu" data-open-tab="specialites">
+                    <img src="/ndole-crevettes.jpg" alt="Ndolé aux crevettes, chikwang et plantains">
+                    <div>
+                        <h3>Ndolé aux crevettes</h3>
+                        <p>Feuilles amères, crevettes, chikwang · 20 €</p>
+                    </div>
+                </a>
+                <a class="dish-card reveal" href="#menu" data-open-tab="poissons">
+                    <img src="/poisson-braise.jpg" alt="Poisson braisé au feu de bois, oignons et plantains">
+                    <div>
+                        <h3>Poisson braisé</h3>
+                        <p>Tilapia, bar ou maquereau · dès 15 €</p>
+                    </div>
+                </a>
+                <a class="dish-card reveal" href="#menu" data-open-tab="porc">
+                    <img src="/mbongo.jpg" alt="Mbongo camerounais et plantains">
+                    <div>
+                        <h3>Mbongo</h3>
+                        <p>Sauce noire au feu de bois · 20 €</p>
+                    </div>
+                </a>
+                <a class="dish-card reveal" href="#menu" data-open-tab="volaille">
+                    <img src="/brochettes.jpg" alt="Brochettes grillées, frites et salade">
+                    <div>
+                        <h3>Grillades</h3>
+                        <p>Brochettes et volaille braisée · dès 12 €</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="story" id="histoire">
         <div class="container">
             <div class="story-grid">
@@ -163,6 +204,7 @@
             </div>
 
             <div class="menu-category" id="porc" role="tabpanel">
+                <div class="menu-shot"><img src="/mbongo.jpg" alt="Mbongo du Continent 237"></div>
                 <h3 class="menu-category-title">Porc & spécialités</h3>
                 <div class="menu-list">
                     <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Porc braisé</div><div class="menu-entry-desc">180 g · + accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
@@ -172,6 +214,7 @@
             </div>
 
             <div class="menu-category" id="volaille" role="tabpanel">
+                <div class="menu-shot"><img src="/brochettes.jpg" alt="Brochettes grillées du Continent 237"></div>
                 <h3 class="menu-category-title">Volailles</h3>
                 <div class="menu-list">
                     <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Ailes de poulet</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
@@ -182,6 +225,7 @@
             </div>
 
             <div class="menu-category" id="specialites" role="tabpanel">
+                <div class="menu-shot"><img src="/ndole-crevettes.jpg" alt="Ndolé aux crevettes du Continent 237"></div>
                 <h3 class="menu-category-title">Spécialités africaines</h3>
                 <div class="menu-list">
                     <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Couscous sauce gombo</div><div class="menu-entry-desc">Viande de bœuf</div></div><div class="menu-entry-price">15 €</div></div>
@@ -196,6 +240,7 @@
             </div>
 
             <div class="menu-category" id="poissons" role="tabpanel">
+                <div class="menu-shot"><img src="/poisson-braise.jpg" alt="Poisson braisé du Continent 237"></div>
                 <h3 class="menu-category-title">Poissons & fruits de mer</h3>
                 <div class="menu-list">
                     <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Poisson braisé — tilapia</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">15 €</div></div>
@@ -246,13 +291,38 @@
                 <p class="section-subtitle">Les vrais plats du Continent 237</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item reveal"><img src="/facade.jpg" alt="Façade du restaurant Le Continent 237 avec sa grande enseigne colorée" loading="lazy"></div>
-                <div class="gallery-item reveal"><img src="/poisson-braise.jpg" alt="Poisson braisé entier servi avec plantains frits et salade" loading="lazy"></div>
-                <div class="gallery-item reveal"><img src="/ndole-crevettes.jpg" alt="Ndolé aux crevettes avec chikwang et plantains" loading="lazy"></div>
-                <div class="gallery-item reveal"><img src="/mbongo.jpg" alt="Mbongo camerounais avec plantains" loading="lazy"></div>
-                <div class="gallery-item reveal"><img src="/poulet-braise.jpg" alt="Poulet braisé aux oignons avec frites et salade" loading="lazy"></div>
-                <div class="gallery-item reveal"><img src="/ndole-chikwang.jpg" alt="Ndolé servi avec chikwang et bananes plantain" loading="lazy"></div>
-                <div class="gallery-item reveal"><img src="/enseigne.jpg" alt="Enseigne suspendue du restaurant dans la rue de Juvisy" loading="lazy"></div>
+                <button class="gallery-item reveal" type="button" data-full="/facade.jpg" data-caption="Façade — Chez Fefe">
+                    <img src="/facade.jpg" alt="Façade du restaurant Le Continent 237" loading="lazy">
+                    <span class="gallery-caption">Façade — Chez Fefe</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/poisson-braise.jpg" data-caption="Poisson braisé">
+                    <img src="/poisson-braise.jpg" alt="Poisson braisé, oignons, plantains et salade" loading="lazy">
+                    <span class="gallery-caption">Poisson braisé</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/ndole-crevettes.jpg" data-caption="Ndolé aux crevettes">
+                    <img src="/ndole-crevettes.jpg" alt="Ndolé aux crevettes, chikwang et plantains" loading="lazy">
+                    <span class="gallery-caption">Ndolé aux crevettes</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/mbongo.jpg" data-caption="Mbongo">
+                    <img src="/mbongo.jpg" alt="Mbongo camerounais et plantains" loading="lazy">
+                    <span class="gallery-caption">Mbongo</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/brochettes.jpg" data-caption="Brochettes grillées">
+                    <img src="/brochettes.jpg" alt="Brochettes grillées, frites et salade" loading="lazy">
+                    <span class="gallery-caption">Brochettes grillées</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/ndole-chikwang.jpg" data-caption="Ndolé et plantains">
+                    <img src="/ndole-chikwang.jpg" alt="Ndolé et plantains vapeur" loading="lazy">
+                    <span class="gallery-caption">Ndolé et plantains</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/enseigne.jpg" data-caption="Enseigne Grande Rue">
+                    <img src="/enseigne.jpg" alt="Enseigne suspendue Le Continent 237" loading="lazy">
+                    <span class="gallery-caption">Enseigne Grande Rue</span>
+                </button>
+                <button class="gallery-item reveal" type="button" data-full="/rue.jpg" data-caption="18 Grande Rue, Juvisy">
+                    <img src="/rue.jpg" alt="Rue de Juvisy-sur-Orge devant le restaurant" loading="lazy">
+                    <span class="gallery-caption">18 Grande Rue</span>
+                </button>
             </div>
         </div>
     </section>
@@ -384,6 +454,11 @@
             <p>Les données du formulaire de réservation (nom, téléphone, e-mail, date, nombre de couverts) sont utilisées uniquement pour rappeler le client et confirmer la table. Conservation : 3 mois. Aucune revente à des tiers.</p>
         </div>
     </footer>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fermer">×</button>
+        <img id="lightboxImage" alt="">
+        <p id="lightboxCaption"></p>
+    </div>
     <script src="/app.js"></script>
 </body>
 </html>
