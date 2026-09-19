@@ -1,23 +1,389 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leprince Karloy — Flyers sur mesure</title>
-    <meta
-      name="description"
-      content="Flyers, affiches et stories conçus à Paris selon votre besoin."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Continent 237 - Restaurant grill au feu de bois à Juvisy-sur-Orge. Cuisine camerounaise authentique. Réservation : 01 69 38 30 23">
+    <meta name="keywords" content="restaurant camerounais Juvisy, cuisine africaine Essonne, ndolé, poulet DG, grill feu de bois, Le Continent 237">
+    <meta property="og:title" content="Le Continent 237 — Restaurant Camerounais à Juvisy-sur-Orge">
+    <meta property="og:description" content="Restaurant grill au feu de bois. Cuisine camerounaise authentique. Réservation au 01 69 38 30 23.">
+    <meta property="og:image" content="/facade.jpg">
+    <meta property="og:url" content="https://lecontinent237.fr">
+    <meta property="og:type" content="restaurant">
+    <title>Le Continent 237 — Restaurant Camerounais Grill au Feu de Bois | Juvisy-sur-Orge</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Le Continent 237 — Chez Fefe",
+        "image": "/facade.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18 Grande Rue",
+            "addressLocality": "Juvisy-sur-Orge",
+            "postalCode": "91260",
+            "addressRegion": "Essonne",
+            "addressCountry": "FR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 48.6896, "longitude": 2.3806 },
+        "telephone": ["+33169383023", "+33752365395"],
+        "email": "contact@lecontinent237.fr",
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "12:00",
+            "closes": "00:00"
+        }],
+        "priceRange": "12-25€",
+        "servesCuisine": ["Camerounaise", "Africaine"],
+        "acceptsReservations": "True"
+    }
+    </script>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#accueil" class="nav-logo">
+                <span class="flag">
+                    <span class="green"></span>
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                </span>
+                Le Continent <span style="color: var(--jaune-cameroun);">237</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#histoire">Histoire</a></li>
+                <li><a href="#menu">La Carte</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reservation" class="nav-cta">Réserver</a></li>
+            </ul>
+            <button class="nav-burger" id="navBurger" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <div class="hero-tag">Restaurant Grill au Feu de Bois</div>
+            <h1>Le Continent <em>237</em></h1>
+            <p class="hero-subtitle">L'âme du Cameroun, le goût du feu</p>
+            <p class="hero-location">18 Grande Rue · Juvisy-sur-Orge</p>
+            <div class="hero-ctas">
+                <a href="#reservation" class="btn btn-gold">Réserver une table</a>
+                <a href="tel:0169383023" class="btn btn-outline">01 69 38 30 23</a>
+            </div>
+        </div>
+        <div class="hero-scroll">Scroll</div>
+    </section>
+
+    <div class="info-bar">
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Adresse</div>
+                <div class="info-value">
+                    <a href="https://maps.google.com/?q=48.6896,2.3806" target="_blank" rel="noopener">
+                        18 Grande Rue<br>91260 Juvisy-sur-Orge
+                    </a>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Téléphone</div>
+                <div class="info-value">
+                    <a href="tel:0169383023">01 69 38 30 23</a>
+                    <a href="tel:0752365395">07 52 36 53 95</a>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Horaires</div>
+                <div class="info-value">Tous les jours<br>12h — 00h</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Ticket moyen</div>
+                <div class="info-value">12 € — 25 €</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="story" id="histoire">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image reveal">
+                    <img src="/enseigne.jpg" alt="Enseigne suspendue du restaurant Le Continent 237 dans la rue de Juvisy-sur-Orge" loading="lazy">
+                </div>
+                <div class="story-content reveal">
+                    <div class="section-number">— Notre histoire</div>
+                    <h2>Le goût <em>authentique</em> du Cameroun</h2>
+                    <p>Le Continent 237, c'est l'adresse du vrai goût camerounais à Juvisy-sur-Orge. Notre restaurant grill au feu de bois vous propose une cuisine africaine authentique, préparée avec passion et des ingrédients frais.</p>
+                    <p>Du ndolé aux crevettes au poulet DG, en passant par le poisson braisé et les brochettes, chaque plat raconte une histoire. Le « 237 » dans notre nom ? C'est l'indicatif téléphonique du Cameroun, notre clin d'œil à la terre qui nous inspire.</p>
+                    <p>Une cuisine généreuse et accessible, parfaite pour les repas en famille ou entre amis. Bienvenue chez Fefe.</p>
+                    <div class="story-signature">— Chez Fefe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-number">— La Carte</div>
+                <h2 class="section-title">Trente et une <em>saveurs</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Cuisine camerounaise authentique, cuisson au feu de bois</p>
+            </div>
+
+            <div class="menu-tabs" role="tablist">
+                <button class="menu-tab active" data-tab="boeuf" role="tab">Bœuf</button>
+                <button class="menu-tab" data-tab="porc" role="tab">Porc</button>
+                <button class="menu-tab" data-tab="volaille" role="tab">Volaille</button>
+                <button class="menu-tab" data-tab="specialites" role="tab">Spécialités</button>
+                <button class="menu-tab" data-tab="poissons" role="tab">Poissons</button>
+                <button class="menu-tab" data-tab="traditionnels" role="tab">Traditionnels</button>
+                <button class="menu-tab" data-tab="boissons" role="tab">Boissons</button>
+            </div>
+
+            <div class="menu-category active" id="boeuf" role="tabpanel">
+                <h3 class="menu-category-title">Viandes de bœuf</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">5 brochettes de bœuf</div><div class="menu-entry-desc">180 g · + accompagnement au choix</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Tendons de bœuf sautés</div><div class="menu-entry-desc">180 g · + accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Tripes de bœuf sautées</div><div class="menu-entry-desc">180 g · + accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Mafé</div><div class="menu-entry-desc">Bœuf, riz, sauce arachide</div></div><div class="menu-entry-price">12 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="porc" role="tabpanel">
+                <h3 class="menu-category-title">Porc & spécialités</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Porc braisé</div><div class="menu-entry-desc">180 g · + accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Porc sauté sauce tomate</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Mbongo</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">20 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="volaille" role="tabpanel">
+                <h3 class="menu-category-title">Volailles</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Ailes de poulet</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Cuisses de poulet braisées</div><div class="menu-entry-desc">180 g · + accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Poulet DG</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Poulet Yassa</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">12 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="specialites" role="tabpanel">
+                <h3 class="menu-category-title">Spécialités africaines</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Couscous sauce gombo</div><div class="menu-entry-desc">Viande de bœuf</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Couscous sauce gombo mixte</div></div><div class="menu-entry-price">20 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Ndolé</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Ndolé mixte</div><div class="menu-entry-desc">Viande + crevettes · + accompagnement</div></div><div class="menu-entry-price">20 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Ndolé Royale</div><div class="menu-entry-desc">Viande, crevettes, poisson fumé, moru</div></div><div class="menu-entry-price">25 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Eru</div><div class="menu-entry-desc">Viande de bœuf + peau de bœuf · + accompagnement</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Eru Royale</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">20 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Taro pilé</div><div class="menu-entry-desc">Le dimanche uniquement</div></div><div class="menu-entry-price">20 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="poissons" role="tabpanel">
+                <h3 class="menu-category-title">Poissons & fruits de mer</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Poisson braisé — tilapia</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Poisson braisé — bar capitaine</div><div class="menu-entry-desc">+ accompagnement · selon la taille</div></div><div class="menu-entry-price">20 / 25 / 30 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Poisson braisé — maquereau</div><div class="menu-entry-desc">+ accompagnement · selon la taille</div></div><div class="menu-entry-price">15 / 20 / 25 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Pépé soupe de poisson</div><div class="menu-entry-desc">+ accompagnement au choix</div></div><div class="menu-entry-price">20 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="traditionnels" role="tabpanel">
+                <h3 class="menu-category-title">Plats traditionnels</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Tieb poulet</div></div><div class="menu-entry-price">15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Tieb poisson</div></div><div class="menu-entry-price">15 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="boissons" role="tabpanel">
+                <h3 class="menu-category-title">Boissons</h3>
+                <div class="menu-list">
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Softs 33 cl</div><div class="menu-entry-desc">Oasis, Fanta fruit du dragon, Schweppes, Coca Chérie…</div></div><div class="menu-entry-price">2 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Red Bull 25 cl</div></div><div class="menu-entry-price">3 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Boissons africaines 60 cl</div><div class="menu-entry-desc">Top grenadine, ananas, pamplemousse, Djino · Malta 33 cl</div></div><div class="menu-entry-price">7 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Heineken · 1664</div><div class="menu-entry-desc">Formule Heineken 12 €</div></div><div class="menu-entry-price">5 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Leffe · Desperados · Kadji · Castel · Isenbeck · Mutzig · Ice · Booster</div></div><div class="menu-entry-price">8 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Petite Guinness</div><div class="menu-entry-desc">Formule petites Guinness 13 €</div></div><div class="menu-entry-price">5 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Grande Guinness</div></div><div class="menu-entry-price">10 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Vins & champagne 75 cl</div><div class="menu-entry-desc">Cabernet d'Anjou rosé 15 € · Mouton Cadet rouge 20 € · Montbazillac 20 € · Moët & Chandon 80 €</div></div><div class="menu-entry-price">dès 15 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Whiskies & spiritueux</div><div class="menu-entry-desc">Jack Daniel's 10 cl · Chivas 12/15/18 ans · Black Label 12 ans</div></div><div class="menu-entry-price">dès 7 €</div></div>
+                    <div class="menu-entry"><div class="menu-entry-info"><div class="menu-entry-name">Apéritifs 10 cl</div><div class="menu-entry-desc">Martini rouge ou blanc · Baileys · Cognac</div></div><div class="menu-entry-price">7 €</div></div>
+                </div>
+            </div>
+
+            <div class="menu-note reveal">
+                <div class="menu-note-title">Accompagnements & suppléments</div>
+                <p><strong style="color: var(--jaune-cameroun);">Inclus</strong> · Bâton de manioc · Bananes plantain (aloko) · Chikwang · Plantain vapeur · Plantain vert frappé à l'huile rouge · Plantain tapée · Riz blanc parfumé · Attiéké</p>
+                <p><strong style="color: var(--jaune-cameroun);">Supplément 3 €</strong> · Frites · Chikwang · Riz · Attiéké · Plantain tapée · Couscous</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="galerie">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-number">— Galerie</div>
+                <h2 class="section-title">L'art du <em>feu</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Les vrais plats du Continent 237</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal"><img src="/facade.jpg" alt="Façade du restaurant Le Continent 237 avec sa grande enseigne colorée" loading="lazy"></div>
+                <div class="gallery-item reveal"><img src="/poisson-braise.jpg" alt="Poisson braisé entier servi avec plantains frits et salade" loading="lazy"></div>
+                <div class="gallery-item reveal"><img src="/ndole-crevettes.jpg" alt="Ndolé aux crevettes avec chikwang et plantains" loading="lazy"></div>
+                <div class="gallery-item reveal"><img src="/mbongo.jpg" alt="Mbongo camerounais avec plantains" loading="lazy"></div>
+                <div class="gallery-item reveal"><img src="/poulet-braise.jpg" alt="Poulet braisé aux oignons avec frites et salade" loading="lazy"></div>
+                <div class="gallery-item reveal"><img src="/ndole-chikwang.jpg" alt="Ndolé servi avec chikwang et bananes plantain" loading="lazy"></div>
+                <div class="gallery-item reveal"><img src="/enseigne.jpg" alt="Enseigne suspendue du restaurant dans la rue de Juvisy" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reservation" id="reservation">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-number">— Réservation</div>
+                <h2 class="section-title">Votre <em>table</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Nous vous rappelons pour confirmer</p>
+            </div>
+            <form class="reservation-form reveal" id="reservationForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Téléphone *</label>
+                        <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10}" autocomplete="tel">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="personnes">Nombre de personnes *</label>
+                        <select id="personnes" name="personnes" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
+                            <option value="plus">Plus de 6 personnes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="heure">Heure *</label>
+                        <select id="heure" name="heure" required>
+                            <option value="">Sélectionnez un créneau</option>
+                            <optgroup label="Déjeuner">
+                                <option value="12:00">12h00</option>
+                                <option value="12:30">12h30</option>
+                                <option value="13:00">13h00</option>
+                                <option value="13:30">13h30</option>
+                            </optgroup>
+                            <optgroup label="Dîner">
+                                <option value="19:00">19h00</option>
+                                <option value="19:30">19h30</option>
+                                <option value="20:00">20h00</option>
+                                <option value="20:30">20h30</option>
+                                <option value="21:00">21h00</option>
+                                <option value="21:30">21h30</option>
+                                <option value="22:00">22h00</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="demandes">Demandes particulières</label>
+                    <textarea id="demandes" name="demandes" placeholder="Allergies, occasion spéciale, table à l'écart…"></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consentement" name="consentement" required>
+                    <label for="consentement">J'accepte que mes données soient utilisées uniquement pour traiter ma demande de réservation, conformément à la <a href="#politique-confidentialite">politique de confidentialité</a>. Durée de conservation : 3 mois.</label>
+                </div>
+                <div class="honeypot" aria-hidden="true">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                <button type="submit" class="form-submit">Envoyer ma demande</button>
+                <div id="formMessage" class="form-message"></div>
+                <p class="form-disclaimer">Votre demande n'est pas une réservation confirmée. Le restaurant vous rappellera sous 24h.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Le Continent <span>237</span></h3>
+                <p>Restaurant grill au feu de bois<br>Cuisine camerounaise authentique<br>18 Grande Rue, 91260 Juvisy-sur-Orge</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="tel:0169383023">01 69 38 30 23</a>
+                <a href="tel:0752365395">07 52 36 53 95</a>
+                <a href="mailto:contact@lecontinent237.fr">contact@lecontinent237.fr</a>
+            </div>
+            <div class="footer-col">
+                <h4>Horaires</h4>
+                <p>Tous les jours</p>
+                <p>Déjeuner : 12h — 13h30</p>
+                <p>Dîner : 19h — 22h</p>
+                <p>Fermeture : 00h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1rem;">Actualités et offres spéciales</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" aria-label="S'inscrire">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Le Continent 237 — Chez Fefe</p>
+            <div>
+                <a href="#mentions-legales">Mentions légales</a>
+                <a href="#politique-confidentialite">Confidentialité</a>
+            </div>
+        </div>
+        <div class="legal" id="mentions-legales">
+            <h2>Mentions légales</h2>
+            <p>Le Continent 237 — Chez Fefe, restaurant grill au feu de bois, 18 Grande Rue, 91260 Juvisy-sur-Orge. Contact : 01 69 38 30 23 · contact@lecontinent237.fr</p>
+        </div>
+        <div class="legal" id="politique-confidentialite">
+            <h2>Politique de confidentialité</h2>
+            <p>Les données du formulaire de réservation (nom, téléphone, e-mail, date, nombre de couverts) sont utilisées uniquement pour rappeler le client et confirmer la table. Conservation : 3 mois. Aucune revente à des tiers.</p>
+        </div>
+    </footer>
+    <script src="/app.js"></script>
+</body>
 </html>

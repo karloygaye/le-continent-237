@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" fill="#100e0c"/>
-  <text x="6" y="23" font-family="Georgia" font-size="16" fill="#d4af4a">LK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="10.67" height="32" fill="#007A5E"/>
+  <rect x="10.67" width="10.67" height="32" fill="#CE1126"/>
+  <rect x="21.33" width="10.67" height="32" fill="#FCD116"/>
 </svg>
