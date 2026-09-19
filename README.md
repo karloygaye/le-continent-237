@@ -2,7 +2,7 @@
 
 Site du restaurant **Le Continent 237 — Chez Fefe**, grill camerounais au feu de bois, 18 Grande Rue, 91260 Juvisy-sur-Orge.
 
-Les demandes de table s’envoient sur **WhatsApp** (07 67 87 75 38).
+Les demandes de table s’envoient sur **WhatsApp** (07 67 87 75 38). Un concierge IA (dans le navigateur, sans envoi de données) conseille la carte.
 
 ## Lancer
 
