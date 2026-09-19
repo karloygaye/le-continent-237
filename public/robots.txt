@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lecontinent237.fr/sitemap.xml

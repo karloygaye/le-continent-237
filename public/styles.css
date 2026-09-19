@@ -19,8 +19,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
+    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.65;
     color: var(--noir);
     background-color: var(--blanc-casse);
     font-size: 16px;
@@ -28,11 +28,23 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.12;
 }
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -40px;
+    background: var(--jaune-cameroun);
+    color: var(--noir);
+    padding: 0.6rem 1rem;
+    z-index: 3000;
+}
+
+.skip-link:focus { top: 1rem; }
 
 .nav {
     position: fixed;
@@ -60,7 +72,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
     color: white;
     text-decoration: none;
@@ -75,7 +87,7 @@ h1, h2, h3, h4 {
 .nav-logo .flag span { width: 4px; height: 16px; display: block; }
 .nav-logo .flag .green { background: var(--vert-cameroun); }
 .nav-logo .flag .red { background: var(--rouge-cameroun); }
-.nav-logo .flag .yellow { background: var(--jaune-cameroun); }
+.nav-logo span { color: var(--jaune-cameroun); }
 
 .nav-links {
     list-style: none;
@@ -208,7 +220,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-subtitle {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     font-style: italic;
     color: var(--blanc-casse);
@@ -284,6 +296,22 @@ h1, h2, h3, h4 {
     color: var(--jaune-cameroun);
 }
 
+.btn-whatsapp {
+    background: #25D366;
+    color: #052e16;
+    border-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: transparent;
+    color: #25D366;
+    border-color: #25D366;
+}
+
+.nav-whatsapp {
+    color: #25D366 !important;
+}
+
 .hero-scroll {
     position: absolute;
     bottom: 3rem;
@@ -340,7 +368,7 @@ h1, h2, h3, h4 {
 }
 
 .info-value {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     color: white;
 }
@@ -445,7 +473,7 @@ section { padding: 8rem 2rem; }
 }
 
 .story-signature {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 1.3rem;
     color: var(--rouge-cameroun);
@@ -531,7 +559,7 @@ section { padding: 8rem 2rem; }
 .menu-entry-info { flex: 1; }
 
 .menu-entry-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     color: white;
     margin-bottom: 0.3rem;
@@ -546,7 +574,7 @@ section { padding: 8rem 2rem; }
 }
 
 .menu-entry-price {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     color: var(--jaune-cameroun);
     font-weight: 700;
@@ -571,7 +599,7 @@ section { padding: 8rem 2rem; }
 }
 
 .menu-note-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     color: var(--jaune-cameroun);
     margin-bottom: 1rem;
@@ -639,7 +667,7 @@ section { padding: 8rem 2rem; }
     bottom: 1rem;
     z-index: 2;
     color: white;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.15rem;
     text-align: left;
 }
@@ -801,7 +829,7 @@ section { padding: 8rem 2rem; }
 
 .form-message strong {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
@@ -856,7 +884,7 @@ footer::before {
     text-transform: uppercase;
     color: var(--jaune-cameroun);
     margin-bottom: 1.5rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
 }
 
@@ -1000,6 +1028,12 @@ footer::before {
 
     .featured-grid { grid-template-columns: 1fr 1fr; }
     .menu-shot { max-width: 280px; margin: 0 auto 2rem; }
+    .nav { padding: 0.9rem 1.1rem; }
+    .nav.scrolled { padding: 0.8rem 1.1rem; }
+    .hero { min-height: 100svh; padding-bottom: 3.5rem; align-items: flex-end; }
+    .hero h1 { font-size: clamp(2.6rem, 12vw, 4.2rem); }
+    .info-grid { gap: 0.5rem; }
+    .wa-fab { bottom: 1rem; right: 1rem; }
 
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
     .form-row { grid-template-columns: 1fr; }
@@ -1105,7 +1139,7 @@ footer::before {
     right: 0;
     text-align: center;
     color: var(--jaune-cameroun);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
 }
 
@@ -1121,6 +1155,25 @@ footer::before {
     min-width: 44px;
     min-height: 44px;
 }
+
+.wa-fab {
+    position: fixed;
+    right: 1.4rem;
+    bottom: 1.4rem;
+    z-index: 1500;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #052e16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+    transition: transform 0.2s ease;
+}
+
+.wa-fab:hover { transform: scale(1.06); }
 
 .sr-only {
     position: absolute;
