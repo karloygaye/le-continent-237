@@ -23,12 +23,12 @@
     <meta name="twitter:title" content="Le Continent 237 — Chez Fefe">
     <meta name="twitter:description" content="Restaurant camerounais grill au feu de bois à Juvisy-sur-Orge. Réservation WhatsApp.">
     <meta name="twitter:image" content="https://lecontinent237.fr/facade.jpg">
-    <meta name="theme-color" content="#4F6F4C">
+    <meta name="theme-color" content="#0A0A0A">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preload" as="image" href="/facade.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     <script type="application/ld+json">
     {
@@ -78,12 +78,21 @@
     <a class="skip-link" href="#accueil">Aller au contenu</a>
     <header class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#accueil" class="nav-logo">Le Continent 237</a>
+            <a href="#accueil" class="nav-logo">
+                <span class="flag" aria-hidden="true">
+                    <span class="green"></span>
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                </span>
+                Le Continent <span>237</span>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#histoire">Histoire</a></li>
                 <li><a href="#menu">La Carte</a></li>
                 <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#ai" data-open-ai>Concierge IA</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="nav-whatsapp" href="https://wa.me/33666601759" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                 <li><a href="#reservation" class="nav-cta">Réserver</a></li>
             </ul>
             <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
@@ -99,15 +108,17 @@
 
     <section class="hero" id="accueil">
         <div class="hero-content">
-            <div class="hero-tag">Buvette · Grill au feu de bois</div>
+            <div class="hero-tag">Restaurant Grill au Feu de Bois</div>
             <h1>Le Continent <em>237</em></h1>
-            <p class="hero-subtitle">Chez Fefe, Juvisy-sur-Orge</p>
+            <p class="hero-subtitle">L'âme du Cameroun, le goût du feu</p>
             <p class="hero-location">18 Grande Rue · Juvisy-sur-Orge</p>
             <div class="hero-ctas">
                 <a href="#reservation" class="btn btn-gold">Réserver une table</a>
-                <a href="#menu" class="btn btn-outline">Voir la carte</a>
+                <a class="btn btn-outline" href="#ai" data-open-ai>Demander à l’IA</a>
+                <a class="btn btn-whatsapp" href="https://wa.me/33666601759" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
         </div>
+        <div class="hero-scroll">Scroll</div>
     </section>
 
     <div class="info-bar">
@@ -129,7 +140,11 @@
             </div>
             <div class="info-item">
                 <div class="info-label">Horaires</div>
-                <div class="info-value">Tous les jours 12h — 00h</div>
+                <div class="info-value">Tous les jours<br>12h — 00h</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Ticket moyen</div>
+                <div class="info-value">12 € — 25 €</div>
             </div>
         </div>
     </div>
@@ -137,11 +152,21 @@
     <section class="featured" id="plats">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-number">À la carte</div>
-                <h2 class="section-title">Les plats du feu</h2>
-                <p class="section-subtitle">Photos prises au Continent 237</p>
+                <div class="section-number">— À la carte</div>
+                <h2 class="section-title">Les plats <em>du feu</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Photos prises au Continent 237 — Chez Fefe</p>
             </div>
-            <div class="featured-grid">
+            <div class="featured-showcase">
+                <a class="facade-card reveal" href="#galerie">
+                    <img src="/facade.jpg" alt="Façade du restaurant Le Continent 237 — Chez Fefe, 18 Grande Rue à Juvisy-sur-Orge">
+                    <div class="facade-card-copy">
+                        <p>Chez Fefe</p>
+                        <h3>La façade</h3>
+                        <span>18 Grande Rue · Juvisy-sur-Orge</span>
+                    </div>
+                </a>
+                <div class="featured-grid">
                 <a class="dish-card reveal" href="#menu" data-open-tab="specialites">
                     <img src="/ndole-crevettes.jpg" alt="Ndolé aux crevettes, chikwang et plantains">
                     <div>
@@ -170,31 +195,32 @@
                         <p>Brochettes et volaille braisée · dès 12 €</p>
                     </div>
                 </a>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="story" id="histoire">
-        <div class="container story-split">
+        <img class="story-bg-img" src="/enseigne.jpg" alt="Enseigne suspendue du restaurant Le Continent 237, Grande Rue à Juvisy-sur-Orge">
+        <div class="container">
             <div class="story-content reveal">
-                <div class="section-number">Notre histoire</div>
-                <h2>Le goût du Cameroun,<br>à Juvisy</h2>
-                <p>Chez Fefe, le Continent 237 est une buvette de feu de bois : ndolé, poisson braisé, poulet DG, mbongo. Des plats généreux, 18 Grande Rue.</p>
-                <p>Le « 237 » est l’indicatif du Cameroun. Bienvenue.</p>
+                <div class="section-number">— Notre histoire</div>
+                <h2>Le goût <em>authentique</em> du Cameroun</h2>
+                <p>Le Continent 237, c'est l'adresse du vrai goût camerounais à Juvisy-sur-Orge. Notre restaurant grill au feu de bois vous propose une cuisine africaine authentique, préparée avec passion et des ingrédients frais.</p>
+                <p>Du ndolé aux crevettes au poulet DG, en passant par le poisson braisé et les brochettes, chaque plat raconte une histoire. Le « 237 » dans notre nom ? C'est l'indicatif téléphonique du Cameroun, notre clin d'œil à la terre qui nous inspire.</p>
+                <p>Une cuisine généreuse et accessible, parfaite pour les repas en famille ou entre amis. Bienvenue chez Fefe.</p>
                 <div class="story-signature">— Chez Fefe</div>
             </div>
-            <figure class="story-photo reveal">
-                <img src="/enseigne.jpg" alt="Enseigne suspendue du restaurant Le Continent 237, Grande Rue à Juvisy-sur-Orge">
-            </figure>
         </div>
     </section>
 
     <section class="menu" id="menu">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-number">La carte</div>
-                <h2 class="section-title">La carte</h2>
-                <p class="section-subtitle">Cuisine camerounaise, cuisson au feu de bois</p>
+                <div class="section-number">— La Carte</div>
+                <h2 class="section-title">Trente et une <em>saveurs</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Cuisine camerounaise authentique, cuisson au feu de bois</p>
             </div>
 
             <div class="menu-tabs" role="tablist">
@@ -290,8 +316,8 @@
 
             <div class="menu-note reveal">
                 <div class="menu-note-title">Accompagnements & suppléments</div>
-                <p><strong>Inclus</strong> · Bâton de manioc · Bananes plantain (aloko) · Chikwang · Plantain vapeur · Plantain vert frappé à l'huile rouge · Plantain tapée · Riz blanc parfumé · Attiéké</p>
-                <p><strong>Supplément 3 €</strong> · Frites · Chikwang · Riz · Attiéké · Plantain tapée · Couscous</p>
+                <p><strong style="color: var(--jaune-cameroun);">Inclus</strong> · Bâton de manioc · Bananes plantain (aloko) · Chikwang · Plantain vapeur · Plantain vert frappé à l'huile rouge · Plantain tapée · Riz blanc parfumé · Attiéké</p>
+                <p><strong style="color: var(--jaune-cameroun);">Supplément 3 €</strong> · Frites · Chikwang · Riz · Attiéké · Plantain tapée · Couscous</p>
             </div>
         </div>
     </section>
@@ -299,9 +325,10 @@
     <section class="gallery" id="galerie">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-number">Galerie</div>
-                <h2 class="section-title">Galerie</h2>
-                <p class="section-subtitle">Les plats et le restaurant</p>
+                <div class="section-number">— Galerie</div>
+                <h2 class="section-title">L'art du <em>feu</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Les vrais plats du Continent 237</p>
             </div>
             <div class="gallery-grid">
                 <button class="gallery-item gallery-item-facade reveal" type="button" data-full="/facade.jpg" data-caption="Façade — Chez Fefe">
@@ -343,7 +370,7 @@
     <section class="reservation" id="reservation">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-number">Réservation</div>
+                <div class="section-number">— Réservation WhatsApp</div>
                 <h2 class="section-title">Votre <em>table</em></h2>
                 <div class="section-divider"></div>
                 <p class="section-subtitle">La demande s’envoie directement sur le WhatsApp de Chez Fefe</p>
@@ -443,6 +470,14 @@
                 <p>Dîner : 19h — 22h</p>
                 <p>Fermeture : 00h</p>
             </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1rem;">Actualités et offres spéciales</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" aria-label="S'inscrire">→</button>
+                </form>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>© 2026 LEPRINCE GAYE</p>
@@ -455,13 +490,13 @@
     <aside class="ai-panel" id="ai" aria-label="Concierge IA du Continent 237">
         <div class="ai-head">
             <div>
-                <p>Concierge</p>
+                <p>Concierge IA gratuit</p>
                 <h3>Chez Fefe</h3>
             </div>
             <button type="button" id="aiClose" aria-label="Fermer le concierge">×</button>
         </div>
         <div class="ai-log" id="aiLog">
-            <div class="ai-msg ai-msg-bot">Carte, horaires ou une table : posez votre question, je m’appuie sur le menu du Continent 237.</div>
+            <div class="ai-msg ai-msg-bot">Je suis un vrai modèle IA (gpt-oss, accès gratuit). Demandez un plat, un budget, les horaires ou une table — je m’appuie sur la carte du Continent 237.</div>
         </div>
         <div class="ai-chips">
             <button type="button" data-ai-prompt="Que me conseilles-tu pour une première fois ?">Première visite</button>
