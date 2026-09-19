@@ -9,6 +9,7 @@ burger.addEventListener('click', () => {
   const open = navLinks.classList.toggle('open')
   burger.setAttribute('aria-expanded', String(open))
   burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu')
+  document.body.classList.toggle('nav-open', open)
 })
 
 navLinks.querySelectorAll('a').forEach((link) => {
@@ -16,6 +17,7 @@ navLinks.querySelectorAll('a').forEach((link) => {
     navLinks.classList.remove('open')
     burger.setAttribute('aria-expanded', 'false')
     burger.setAttribute('aria-label', 'Ouvrir le menu')
+    document.body.classList.remove('nav-open')
   })
 })
 
