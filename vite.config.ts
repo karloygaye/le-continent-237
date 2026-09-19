@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
+import { conciergePlugin } from './server/concierge.ts'
 
 export default defineConfig({
+  plugins: [conciergePlugin()],
   server: {
     host: true,
     port: 43141,
