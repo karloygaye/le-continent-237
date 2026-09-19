@@ -1,4 +1,4 @@
-const AI_WHATSAPP = '33767877538'
+const AI_WHATSAPP = '33666601759'
 
 const DISHES = [
   { name: 'Ndolé aux crevettes', price: '20 €', tags: ['ndole', 'ndolé', 'crevette', 'spécialité', 'cameroun'], blurb: 'Feuilles amères, crevettes et chikwang — le plat signature.' },
@@ -56,7 +56,7 @@ function localReply(raw) {
   }
 
   if (/(whatsapp|telephone|téléphone|appeler|numero|numéro)/.test(q)) {
-    return 'Réservation WhatsApp : **07 67 87 75 38**. Téléphone fixe : 01 69 38 30 23.'
+    return 'Réservation WhatsApp : **06 66 60 17 59**. Téléphone fixe : 01 69 38 30 23.'
   }
 
   if (/(reserv|table|book)/.test(q)) {
