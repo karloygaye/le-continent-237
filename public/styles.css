@@ -815,7 +815,7 @@ footer::before {
 }
 
 .form-message.success {
-    background: rgba(252,209,22,0.1);
+    background: rgba(255,255,255,0.06);
     border-color: var(--jaune-cameroun);
     color: var(--jaune-cameroun);
 }
@@ -1311,7 +1311,7 @@ footer {
     display: none;
     flex-direction: column;
     background: #120f0c;
-    border: 1px solid rgba(252, 209, 22, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     color: white;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
@@ -1365,7 +1365,7 @@ footer {
 .ai-msg-bot { background: rgba(255, 255, 255, 0.06); }
 .ai-msg-user {
     align-self: flex-end;
-    background: rgba(252, 209, 22, 0.16);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--jaune-cameroun);
 }
 
@@ -1378,7 +1378,7 @@ footer {
 
 .ai-chips button {
     background: transparent;
-    border: 1px solid rgba(252, 209, 22, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     color: var(--jaune-cameroun);
     font-family: inherit;
     font-size: 0.72rem;
