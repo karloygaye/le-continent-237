@@ -1,18 +1,18 @@
 :root {
-    --vert-cameroun: #007A5E;
-    --vert-profond: #004D3A;
-    --rouge-cameroun: #CE1126;
-    --rouge-brique: #A01520;
-    --jaune-cameroun: #FCD116;
-    --or: #E8912A;
-    --sunset: #c45c12;
-    --noir: #0A0A0A;
-    --noir-doux: #1A1A1A;
+    --vert-cameroun: #3f3a35;
+    --vert-profond: #161412;
+    --rouge-cameroun: #3f3a35;
+    --rouge-brique: #3f3a35;
+    --jaune-cameroun: #6e5843;
+    --or: #6e5843;
+    --sunset: #6e5843;
+    --noir: #161412;
+    --noir-doux: #241f1b;
     --blanc: #FFFFFF;
-    --blanc-casse: #FDFBF7;
-    --creme: #F5F1E8;
-    --gris: #6B6B6B;
-    --gris-clair: #E8E4DD;
+    --blanc-casse: #f4f1ec;
+    --creme: #f4f1ec;
+    --gris: #6b6560;
+    --gris-clair: #e5dfd6;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -65,11 +65,11 @@ h1, h2, h3, h4 {
 }
 
 .nav.scrolled {
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(22, 20, 18, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 1rem 2rem;
-    border-bottom: 2px solid var(--jaune-cameroun);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-inner {
@@ -92,11 +92,7 @@ h1, h2, h3, h4 {
     gap: 0.5rem;
 }
 
-.nav-logo .flag { display: inline-flex; gap: 2px; height: 16px; }
-.nav-logo .flag span { width: 4px; height: 16px; display: block; }
-.nav-logo .flag .green { background: var(--vert-cameroun); }
-.nav-logo .flag .red { background: var(--rouge-cameroun); }
-.nav-logo span { color: var(--jaune-cameroun); }
+.nav-logo span { color: inherit; }
 
 .nav-links {
     list-style: none;
@@ -134,25 +130,25 @@ h1, h2, h3, h4 {
 .nav-links a:focus { color: var(--jaune-cameroun); }
 
 .nav-cta {
-    background: var(--rouge-cameroun);
+    background: transparent;
     color: white !important;
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     font-size: 0.75rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.3s;
-    border: 2px solid var(--rouge-cameroun);
+    border: 1px solid rgba(255,255,255,0.35);
     min-height: 44px;
     display: inline-flex;
     align-items: center;
 }
 
 .nav-cta:hover {
-    background: transparent;
-    color: var(--jaune-cameroun) !important;
-    border-color: var(--jaune-cameroun);
+    background: white;
+    color: var(--noir) !important;
+    border-color: white;
 }
 
 .nav-cta::after { display: none !important; }
@@ -189,7 +185,7 @@ h1, h2, h3, h4 {
     inset: 0;
     z-index: 0;
     background: url('/facade.jpg') center 42%/cover no-repeat;
-    filter: contrast(1.42) saturate(1.18) brightness(0.72);
+    filter: contrast(1.12) saturate(0.85) brightness(0.62);
     transform: scale(1.05);
 }
 
@@ -212,22 +208,11 @@ h1, h2, h3, h4 {
 
 .hero-tag {
     font-size: 0.75rem;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--jaune-cameroun);
-    margin-bottom: 2rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.hero-tag::before,
-.hero-tag::after {
-    content: '';
-    display: inline-block;
-    width: 40px; height: 2px;
-    background: var(--jaune-cameroun);
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .hero h1 {
@@ -240,7 +225,7 @@ h1, h2, h3, h4 {
 
 .hero h1 em {
     font-style: italic;
-    color: var(--jaune-cameroun);
+    color: rgba(255,255,255,0.88);
     font-weight: 400;
 }
 
@@ -269,8 +254,7 @@ h1, h2, h3, h4 {
     content: '';
     display: inline-block;
     width: 8px; height: 8px;
-    background: var(--rouge-cameroun);
-    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
 }
 
 .hero-ctas {
@@ -298,43 +282,43 @@ h1, h2, h3, h4 {
 }
 
 .btn-gold {
-    background: var(--jaune-cameroun);
+    background: white;
     color: var(--noir);
-    border-color: var(--jaune-cameroun);
+    border-color: white;
 }
 
 .btn-gold:hover {
     background: transparent;
-    color: var(--jaune-cameroun);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(252,209,22,0.3);
+    color: white;
+    transform: none;
+    box-shadow: none;
 }
 
 .btn-outline {
     background: transparent;
     color: white;
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(255,255,255,0.45);
 }
 
 .btn-outline:hover {
-    border-color: var(--jaune-cameroun);
-    color: var(--jaune-cameroun);
+    border-color: white;
+    color: white;
 }
 
 .btn-whatsapp {
-    background: #25D366;
-    color: #052e16;
-    border-color: #25D366;
+    background: transparent;
+    color: white;
+    border-color: rgba(255,255,255,0.45);
 }
 
 .btn-whatsapp:hover {
     background: transparent;
-    color: #25D366;
-    border-color: #25D366;
+    color: white;
+    border-color: white;
 }
 
 .nav-whatsapp {
-    color: #25D366 !important;
+    color: white !important;
 }
 
 .hero-scroll {
@@ -359,11 +343,11 @@ h1, h2, h3, h4 {
 }
 
 .info-bar {
-    background: var(--noir);
-    color: white;
-    padding: 2rem 1rem;
-    border-top: 4px solid var(--jaune-cameroun);
-    border-bottom: 4px solid var(--rouge-cameroun);
+    background: var(--paper, var(--creme));
+    color: var(--noir);
+    padding: 1.5rem 1rem;
+    border-top: 0;
+    border-bottom: 1px solid var(--gris-clair);
 }
 
 .info-grid {
@@ -381,7 +365,7 @@ h1, h2, h3, h4 {
     position: absolute;
     right: 0; top: 20%;
     height: 60%; width: 1px;
-    background: rgba(252,209,22,0.3);
+    background: var(--gris-clair);
 }
 
 .info-label {
@@ -395,12 +379,12 @@ h1, h2, h3, h4 {
 
 .info-value {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    color: white;
+    font-size: 1.25rem;
+    color: var(--noir);
 }
 
 .info-value a {
-    color: white;
+    color: var(--noir);
     text-decoration: none;
     transition: color 0.3s;
     display: block;
@@ -409,32 +393,30 @@ h1, h2, h3, h4 {
 
 .info-value a:hover { color: var(--jaune-cameroun); }
 
-section { padding: 8rem 0; }
+section { padding: 5.5rem 0; }
 
-.section-header { text-align: center; margin-bottom: 5rem; }
+.section-header { text-align: center; margin-bottom: 3rem; }
 
 .section-number {
-    font-size: 0.75rem;
-    letter-spacing: 0.4em;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--rouge-cameroun);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
+    color: var(--gris);
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .section-title {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
     color: var(--noir);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
 }
 
-.section-title em { font-style: italic; color: var(--vert-cameroun); }
+.section-title em { font-style: italic; color: inherit; }
 
 .section-divider {
-    width: 80px; height: 3px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
-    margin: 2rem auto;
+    display: none;
 }
 
 .section-subtitle {
@@ -462,7 +444,7 @@ section { padding: 8rem 0; }
     height: 100%;
     object-fit: cover;
     object-position: center 28%;
-    filter: contrast(1.65) saturate(1.25) brightness(0.55);
+    filter: contrast(1.15) saturate(0.88) brightness(0.5);
     transform: scale(1.06);
     z-index: 0;
 }
@@ -494,7 +476,7 @@ section { padding: 8rem 0; }
     text-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
-.story-content h2 em { font-style: italic; color: var(--jaune-cameroun); }
+.story-content h2 em { font-style: italic; color: inherit; }
 
 .story-content p {
     font-size: 1.08rem;
@@ -511,7 +493,7 @@ section { padding: 8rem 0; }
     color: var(--jaune-cameroun);
     margin-top: 1.5rem;
     padding-left: 1rem;
-    border-left: 3px solid var(--jaune-cameroun);
+    border-left: 1px solid rgba(255,255,255,0.4);
 }
 
 .menu {
@@ -520,11 +502,13 @@ section { padding: 8rem 0; }
     position: relative;
 }
 
-.menu::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
+.menu::before,
+.gallery::before,
+.reservation::before,
+footer::before,
+.menu-note::before,
+.reservation-form::before {
+    display: none;
 }
 
 .menu .section-title { color: white; }
@@ -535,7 +519,7 @@ section { padding: 8rem 0; }
     flex-wrap: nowrap;
     gap: 0.35rem;
     margin-bottom: 4rem;
-    border-bottom: 1px solid rgba(252,209,22,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
     padding-bottom: 1rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -622,17 +606,18 @@ section { padding: 8rem 0; }
     text-align: center;
     margin-top: 3rem;
     padding: 2rem;
-    border: 2px solid var(--jaune-cameroun);
-    background: rgba(252,209,22,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    background: transparent;
     position: relative;
 }
 
-.menu-note::before {
-    content: '';
-    position: absolute;
-    top: -2px; left: -2px; right: -2px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
+.menu-note::before,
+.gallery::before,
+.reservation::before,
+.reservation-form::before,
+footer::before {
+    display: none;
+    content: none;
 }
 
 .menu-note-title {
@@ -649,13 +634,6 @@ section { padding: 8rem 0; }
 }
 
 .gallery { background: var(--blanc-casse); position: relative; }
-
-.gallery::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
-}
 
 .gallery-grid {
     display: grid;
@@ -719,17 +697,10 @@ section { padding: 8rem 0; }
 .gallery-item:nth-child(8) { grid-column: span 4; grid-row: span 1; }
 
 .reservation {
-    background: linear-gradient(135deg, var(--vert-profond) 0%, var(--noir) 100%);
+    background: var(--noir);
     color: white;
     position: relative;
     overflow: hidden;
-}
-
-.reservation::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
 }
 
 .reservation .section-title { color: white; }
@@ -739,17 +710,8 @@ section { padding: 8rem 0; }
     margin: 0 auto;
     background: rgba(255,255,255,0.03);
     padding: 3rem;
-    border: 2px solid var(--jaune-cameroun);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.14);
     position: relative;
-}
-
-.reservation-form::before {
-    content: '';
-    position: absolute;
-    top: -2px; left: -2px; right: -2px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
 }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
@@ -783,7 +745,7 @@ section { padding: 8rem 0; }
 .form-group textarea:focus {
     outline: none;
     border-color: var(--jaune-cameroun);
-    background: rgba(252,209,22,0.05);
+    background: rgba(255,255,255,0.04);
 }
 
 .form-group textarea { resize: vertical; min-height: 100px; }
@@ -825,9 +787,9 @@ section { padding: 8rem 0; }
 .form-submit {
     width: 100%;
     padding: 1.3rem;
-    background: var(--rouge-cameroun);
-    color: white;
-    border: 2px solid var(--rouge-cameroun);
+    background: var(--blanc);
+    color: var(--noir);
+    border: 1px solid var(--blanc);
     font-size: 0.85rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -840,8 +802,8 @@ section { padding: 8rem 0; }
 
 .form-submit:hover {
     background: transparent;
-    color: var(--jaune-cameroun);
-    border-color: var(--jaune-cameroun);
+    color: white;
+    border-color: white;
 }
 
 .form-message {
@@ -885,24 +847,17 @@ section { padding: 8rem 0; }
 footer {
     background: var(--noir);
     color: white;
-    padding: 5rem 2rem 2rem;
-    border-top: 4px solid var(--jaune-cameroun);
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
     position: relative;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: -4px; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--vert-cameroun), var(--jaune-cameroun), var(--rouge-cameroun));
 }
 
 .footer-grid {
     max-width: 1400px;
     margin: 0 auto 4rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
 }
 
 .footer-brand h3 { font-size: 2rem; color: white; margin-bottom: 1rem; }
@@ -1205,12 +1160,12 @@ footer::before {
 
 .featured-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
 }
 
 .gallery-item-facade img {
-    filter: contrast(1.38) saturate(1.12) brightness(0.9);
+    filter: none;
     object-position: center 38%;
 }
 
@@ -1253,7 +1208,7 @@ footer::before {
     aspect-ratio: 1;
     overflow: hidden;
     margin: 0 auto 2.5rem;
-    border: 3px solid var(--jaune-cameroun);
+    border: 0;
 }
 
 .menu-shot img {
@@ -1314,12 +1269,12 @@ footer::before {
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    background: #25D366;
-    color: #052e16;
+    background: #2a2622;
+    color: #f4f1ec;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+    box-shadow: 0 10px 24px rgba(22, 20, 18, 0.28);
     transition: transform 0.2s ease;
 }
 
@@ -1334,15 +1289,16 @@ footer::before {
     padding: 0 1.15rem;
     border: 0;
     border-radius: 999px;
-    background: var(--jaune-cameroun);
-    color: var(--noir);
+    background: rgba(22, 20, 18, 0.88);
+    color: #f4f1ec;
     font-family: inherit;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 12px 30px rgba(252, 209, 22, 0.28);
+    box-shadow: none;
+    border: 1px solid rgba(255,255,255,0.18);
 }
 
 .ai-panel {

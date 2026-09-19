@@ -152,12 +152,6 @@ function showMessage(type, html) {
   messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 
-document.getElementById('newsletterForm').addEventListener('submit', function (e) {
-  e.preventDefault()
-  alert('Merci pour votre inscription ! Vous recevrez nos actualités prochainement.')
-  this.reset()
-})
-
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href')
