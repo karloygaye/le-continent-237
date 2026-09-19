@@ -61,7 +61,7 @@ const maxDate = new Date()
 maxDate.setMonth(maxDate.getMonth() + 3)
 dateInput.setAttribute('max', maxDate.toISOString().split('T')[0])
 
-const WHATSAPP_NUMBER = '33752365395'
+const WHATSAPP_NUMBER = '33767877538'
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -134,7 +134,7 @@ form.addEventListener('submit', (e) => {
   showMessage(
     'success',
     `<strong>WhatsApp prêt — ${reference}</strong>
-     <p>La conversation s’ouvre avec Chez Fefe (07 52 36 53 95).</p>
+     <p>La conversation s’ouvre avec Chez Fefe (07 67 87 75 38).</p>
      <p style="margin-top:0.6rem"><a href="${url}" target="_blank" rel="noopener noreferrer">Ouvrir WhatsApp si rien ne s’affiche</a></p>`,
   )
 
