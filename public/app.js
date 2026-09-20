@@ -97,17 +97,27 @@ form.addEventListener('submit', (e) => {
     return
   }
 
-  const selectedDate = new Date(date)
+  const [year, month, day] = date.split('-').map(Number)
+  const localDate = new Date(year, month - 1, day)
   const todayDate = new Date()
   todayDate.setHours(0, 0, 0, 0)
 
-  if (selectedDate < todayDate) {
+  if (localDate < todayDate) {
     showMessage('error', 'La date de réservation ne peut pas être dans le passé.')
+    return
+  }
+  if (localDate.getDay() === 1) {
+    showMessage('error', 'Fermé le lundi. Choisissez un autre jour.')
+    return
+  }
+  const weekendLate = localDate.getDay() === 5 || localDate.getDay() === 6
+  if ((heure === '23:30' || heure === '00:00') && !weekendLate) {
+    showMessage('error', 'Les créneaux après 23h sont réservés au vendredi et au samedi.')
     return
   }
 
   const reference = 'LC237-' + Date.now().toString(36).toUpperCase().slice(-6)
-  const dateFr = selectedDate.toLocaleDateString('fr-FR', {
+  const dateFr = localDate.toLocaleDateString('fr-FR', {
     weekday: 'long',
     day: 'numeric',
     month: 'long',

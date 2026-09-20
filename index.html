@@ -54,12 +54,20 @@
         "geo": { "@type": "GeoCoordinates", "latitude": 48.6896, "longitude": 2.3806 },
         "telephone": ["+33169383023", "+33666601759"],
         "email": "contact@lecontinent237.fr",
-        "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "12:00",
-            "closes": "00:00"
-        }],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"],
+                "opens": "12:00",
+                "closes": "23:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Friday","Saturday"],
+                "opens": "12:00",
+                "closes": "00:00"
+            }
+        ],
         "priceRange": "€€",
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Cash, Credit Card",
@@ -154,7 +162,7 @@
             </div>
             <div class="info-item">
                 <div class="info-label">Horaires</div>
-                <div class="info-value">Tous les jours<br>12h — 00h</div>
+                <div class="info-value">Mar.–jeu. · dim. 12h — 23h<br>non-stop · ven.–sam. 12h — 00h</div>
             </div>
             <div class="info-item">
                 <div class="info-label">Ticket moyen</div>
@@ -221,7 +229,7 @@
                 <div class="section-number">— Notre histoire</div>
                 <h2>Le goût <em>authentique</em> du Cameroun</h2>
                 <p>Le Continent 237, c'est l'adresse du vrai goût camerounais à Juvisy-sur-Orge. Notre restaurant grill au feu de bois vous propose une cuisine africaine authentique, préparée avec passion et des ingrédients frais.</p>
-                <p>Du ndolé aux crevettes au poulet DG, en passant par le poisson braisé et les brochettes, chaque plat raconte une histoire. Le « 237 » dans notre nom ? C'est l'indicatif téléphonique du Cameroun, notre clin d'œil à la terre qui nous inspire.</p>
+                <p>Du ndolé aux crevettes, poulet DG, en passant par le poisson braisé et les brochettes, chaque plat raconte une histoire. Le « 237 » dans notre nom ? C'est l'indicatif téléphonique du Cameroun, notre clin d'œil à la terre qui nous inspire.</p>
                 <p>Une cuisine généreuse et accessible, parfaite pour les repas en famille ou entre amis. Bienvenue chez Fefe.</p>
                 <div class="story-signature">— Chez Fefe</div>
             </div>
@@ -466,13 +474,21 @@
                         <label for="heure">Heure *</label>
                         <select id="heure" name="heure" required>
                             <option value="">Sélectionnez un créneau</option>
-                            <optgroup label="Déjeuner">
+                            <optgroup label="Service continu">
                                 <option value="12:00">12h00</option>
                                 <option value="12:30">12h30</option>
                                 <option value="13:00">13h00</option>
                                 <option value="13:30">13h30</option>
-                            </optgroup>
-                            <optgroup label="Dîner">
+                                <option value="14:00">14h00</option>
+                                <option value="14:30">14h30</option>
+                                <option value="15:00">15h00</option>
+                                <option value="15:30">15h30</option>
+                                <option value="16:00">16h00</option>
+                                <option value="16:30">16h30</option>
+                                <option value="17:00">17h00</option>
+                                <option value="17:30">17h30</option>
+                                <option value="18:00">18h00</option>
+                                <option value="18:30">18h30</option>
                                 <option value="19:00">19h00</option>
                                 <option value="19:30">19h30</option>
                                 <option value="20:00">20h00</option>
@@ -480,6 +496,12 @@
                                 <option value="21:00">21h00</option>
                                 <option value="21:30">21h30</option>
                                 <option value="22:00">22h00</option>
+                                <option value="22:30">22h30</option>
+                                <option value="23:00">23h00</option>
+                            </optgroup>
+                            <optgroup label="Vendredi et samedi">
+                                <option value="23:30">23h30</option>
+                                <option value="00:00">00h00</option>
                             </optgroup>
                         </select>
                     </div>
@@ -517,10 +539,10 @@
             </div>
             <div class="footer-col">
                 <h4>Horaires</h4>
-                <p>Tous les jours</p>
-                <p>Déjeuner : 12h — 13h30</p>
-                <p>Dîner : 19h — 22h</p>
-                <p>Fermeture : 00h</p>
+                <p>Fermé le lundi</p>
+                <p>Mardi – jeudi : 12h — 23h non-stop</p>
+                <p>Vendredi – samedi : 12h — 00h</p>
+                <p>Dimanche : 12h — 23h</p>
             </div>
             <div class="footer-col">
                 <h4>Newsletter</h4>
