@@ -718,6 +718,48 @@ section { padding: 8rem 0; }
 .gallery-item:nth-child(7) { grid-column: span 4; grid-row: span 1; }
 .gallery-item:nth-child(8) { grid-column: span 4; grid-row: span 1; }
 
+.reviews { background: var(--creme); }
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.review-card {
+    background: var(--blanc);
+    padding: 1.6rem 1.5rem 1.4rem;
+    box-shadow: 0 16px 36px rgba(10, 10, 10, 0.06);
+}
+
+.review-stars {
+    color: var(--jaune-cameroun);
+    letter-spacing: 0.12em;
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.review-card blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--noir);
+    margin-bottom: 1.1rem;
+    font-style: italic;
+}
+
+.review-meta {
+    color: var(--gris);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+}
+
+.review-meta strong {
+    color: var(--vert-profond);
+    font-family: Outfit, sans-serif;
+    font-weight: 600;
+}
+
 .reservation {
     background: linear-gradient(135deg, var(--vert-profond) 0%, var(--noir) 100%);
     color: white;
@@ -1033,6 +1075,7 @@ footer::before {
     .nav-links.open a { font-size: 1.15rem; }
     .nav-links.open .nav-cta { display: inline-flex; }
     body.nav-open { overflow: hidden; }
+    .reviews-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1075,7 +1118,7 @@ footer::before {
     }
     .story-content h2 { font-size: clamp(2rem, 9vw, 3rem); }
 
-    .featured, .gallery, .menu, .reservation { padding-block: 4rem; }
+    .featured, .gallery, .menu, .reservation, .reviews { padding-block: 4rem; }
     section { padding: 4rem 0; }
 
     .featured-showcase { grid-template-columns: 1fr; }
@@ -1099,6 +1142,8 @@ footer::before {
         grid-row: span 2;
     }
     .gallery-caption { font-size: 0.95rem; left: 0.7rem; right: 0.7rem; bottom: 0.7rem; }
+
+    .reviews-grid { grid-template-columns: 1fr; }
 
     .menu-tab { padding: 0.7rem 1rem; font-size: 0.7rem; letter-spacing: 0.12em; }
     .menu-category-title { font-size: 1.7rem; }

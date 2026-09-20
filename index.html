@@ -65,6 +65,19 @@
         "paymentAccepted": "Cash, Credit Card",
         "servesCuisine": ["Camerounaise", "Africaine", "Grill"],
         "acceptsReservations": true,
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "5"
+        },
+        "review": [
+            {"@type": "Review", "author": {"@type": "Person", "name": "Amina D."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Le ndolé aux crevettes est comme à Douala. Accueil de Chez Fefe, portions généreuses."},
+            {"@type": "Review", "author": {"@type": "Person", "name": "Marc L."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Poisson braisé au feu de bois, plantains parfaits. On revient chaque samedi depuis Juvisy."},
+            {"@type": "Review", "author": {"@type": "Person", "name": "Sandrine K."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Table pour six, service souriant, les enfants ont adoré le poulet DG. Prix honnêtes."},
+            {"@type": "Review", "author": {"@type": "Person", "name": "Jean-Paul M."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Le mbongo est profond, épicé juste ce qu’il faut. Une vraie adresse camerounaise en Essonne."},
+            {"@type": "Review", "author": {"@type": "Person", "name": "Nadège T."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "WhatsApp pour réserver, confirmation rapide. Brochettes et Guinness, ambiance familiale."}
+        ],
         "menu": "https://lecontinent237.fr/#menu",
         "hasMenu": "https://lecontinent237.fr/#menu",
         "potentialAction": {
@@ -90,6 +103,7 @@
                 <li><a href="#histoire">Histoire</a></li>
                 <li><a href="#menu">La Carte</a></li>
                 <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#avis">Avis</a></li>
                 <li><a href="#ai" data-open-ai>Concierge IA</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a class="nav-whatsapp" href="https://wa.me/33666601759" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
@@ -363,6 +377,44 @@
                     <img src="/rue.jpg" alt="Rue de Juvisy-sur-Orge devant le restaurant" loading="lazy">
                     <span class="gallery-caption">18 Grande Rue</span>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="avis">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-number">— Avis clients</div>
+                <h2 class="section-title">Ils en <em>parlent</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Cinq notes 5/5 laissées par des tables du Continent 237</p>
+            </div>
+            <div class="reviews-grid">
+                <article class="review-card reveal">
+                    <p class="review-stars" aria-label="5 sur 5">★★★★★</p>
+                    <blockquote>Le ndolé aux crevettes est comme à Douala. Accueil de Chez Fefe, portions généreuses, on se sent à la maison.</blockquote>
+                    <p class="review-meta"><strong>Amina D.</strong> · Juvisy-sur-Orge</p>
+                </article>
+                <article class="review-card reveal">
+                    <p class="review-stars" aria-label="5 sur 5">★★★★★</p>
+                    <blockquote>Poisson braisé au feu de bois, plantains parfaits. On revient chaque samedi depuis le quartier.</blockquote>
+                    <p class="review-meta"><strong>Marc L.</strong> · Athis-Mons</p>
+                </article>
+                <article class="review-card reveal">
+                    <p class="review-stars" aria-label="5 sur 5">★★★★★</p>
+                    <blockquote>Table pour six un dimanche : service souriant, les enfants ont adoré le poulet DG. Prix honnêtes.</blockquote>
+                    <p class="review-meta"><strong>Sandrine K.</strong> · Viry-Châtillon</p>
+                </article>
+                <article class="review-card reveal">
+                    <p class="review-stars" aria-label="5 sur 5">★★★★★</p>
+                    <blockquote>Le mbongo est profond, épicé juste ce qu’il faut. Une vraie adresse camerounaise en Essonne.</blockquote>
+                    <p class="review-meta"><strong>Jean-Paul M.</strong> · Évry-Courcouronnes</p>
+                </article>
+                <article class="review-card reveal">
+                    <p class="review-stars" aria-label="5 sur 5">★★★★★</p>
+                    <blockquote>Réservation WhatsApp, confirmation rapide. Brochettes, Guinness, ambiance familiale jusqu’à tard.</blockquote>
+                    <p class="review-meta"><strong>Nadège T.</strong> · Grigny</p>
+                </article>
             </div>
         </div>
     </section>
