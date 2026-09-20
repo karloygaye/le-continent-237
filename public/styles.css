@@ -722,7 +722,7 @@ section { padding: 8rem 0; }
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: 1.25rem;
 }
 
@@ -1075,7 +1075,6 @@ footer::before {
     .nav-links.open a { font-size: 1.15rem; }
     .nav-links.open .nav-cta { display: inline-flex; }
     body.nav-open { overflow: hidden; }
-    .reviews-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1142,8 +1141,6 @@ footer::before {
         grid-row: span 2;
     }
     .gallery-caption { font-size: 0.95rem; left: 0.7rem; right: 0.7rem; bottom: 0.7rem; }
-
-    .reviews-grid { grid-template-columns: 1fr; }
 
     .menu-tab { padding: 0.7rem 1rem; font-size: 0.7rem; letter-spacing: 0.12em; }
     .menu-category-title { font-size: 1.7rem; }
@@ -1518,4 +1515,8 @@ footer::before {
 :focus-visible {
     outline: 3px solid var(--jaune-cameroun);
     outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .reviews-grid { grid-template-columns: 1fr; }
 }
